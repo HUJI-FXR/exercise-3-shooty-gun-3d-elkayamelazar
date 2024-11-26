@@ -24,7 +24,8 @@ public class ShootyGunScript : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject newBullet = Instantiate(Bullet, transform.position, transform.rotation);
+        Vector3 position = transform.position + new Vector3(0, 0, 4);
+        GameObject newBullet = Instantiate(Bullet, position, transform.rotation);
 
         Rigidbody bulletRb = newBullet.GetComponent<Rigidbody>();
 
