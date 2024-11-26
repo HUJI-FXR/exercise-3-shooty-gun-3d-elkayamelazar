@@ -21,7 +21,7 @@ public class DemageScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "player")
+        if(collision.gameObject.tag == "player" && gameObject.tag != "bullet")
         {
             collision.gameObject.GetComponent<LifeTotalScript>().lifeTotal -=
                 Random.Range(minDamage, maxDamage);
